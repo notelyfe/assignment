@@ -1,0 +1,40 @@
+.dashboardWrapper {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    overflow-y: auto;
+    position: absolute;
+    top: 49px;
+    background: #000000;
+    color: #fff;
+}
+
+.mainWrapper {
+    position: fixed;
+    top: 49px;
+    left: 300px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 95vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.togglemain{
+    right: 310px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* .collapseMainWrapper{
+    left: 80px;
+    transition: all 0.3s ease-in-out;
+}
+
+.expandWrapper{
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+} */

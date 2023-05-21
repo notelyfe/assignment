@@ -1,0 +1,15 @@
+.header{
+    border-bottom: 2px solid #323642;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    padding: 0.6rem !important;
+    text-transform: capitalize;
+}
+
+.header h3{
+    /* border-bottom: 2px solid #0d6efd; */
+    padding: 0.6rem !important;
+    margin-left: 25px !important;
+}

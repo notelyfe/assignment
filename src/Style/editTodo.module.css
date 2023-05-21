@@ -1,0 +1,88 @@
+.wrapper {
+    border-left: 2px solid #323642;
+    border-top: 2px solid #323642;
+    width: 308px;
+    height: 85vh;
+    position: absolute;
+    top: 128px;
+    right: 0;
+    animation: editWrapper 400ms 1 both;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+@keyframes editWrapper {
+    0% {
+        right: -100px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    100% {
+        right: 8px;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+.editHeader {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.editHeader h3 {
+    color: white;
+    font-size: 22px;
+}
+
+.editHeader button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    background: #474c57;
+    color: white;
+}
+
+.editHeader button:active {
+    transform: scale(0.9);
+}
+
+.formControl {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    gap: 15px;
+}
+
+.formControl input,
+textarea {
+    width: 95%;
+    color: white;
+}
+
+.formControl input {
+    height: 40px;
+    font-size: 18px;
+    padding: 0 8px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: #191B20;
+}
+
+.formControl button {
+    height: 40px;
+    background: #3772FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.formControl button:active {
+    transform: scale(0.9);
+}

@@ -1,0 +1,87 @@
+.sideNavWrapper {
+    height: 95vh;
+    width: 300px;
+    border-right: 2px solid #323642;
+    overflow-y: auto;
+    /* border: 2px solid red; */
+}
+
+.sideHeader {
+    height: 75px;
+    justify-content: space-between;
+    padding: 0 1.2rem !important;
+    display: flex;
+    align-items: center;
+}
+
+.initials {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3772FF;
+}
+
+.backArrow {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.backArrow:active {
+    transform: scale(0.9);
+}
+
+.NavigationSection{
+    height: 87vh;
+}
+
+.navSection{
+    width: 90% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.6rem !important;
+    list-style: none;
+}
+
+.navSection li{
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.navLinks{
+    width: 100% !important;
+    padding: 0.6rem !important;
+    height: 35px !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    color: #808191 !important;
+    text-decoration: none;
+    border-radius: 14px;
+}
+
+.navLinks:hover{
+    background-color: #353945;
+    color: white !important;
+}
+.navLinks:active{
+    transform: scale(0.9);
+}
+
+.navLinks img{
+    height: 25px;
+    width: 25px;
+}
+
+.activeLink{
+    background-color: #353945;
+}

@@ -1,0 +1,29 @@
+{
+  "todo-list": [
+    {
+      "title": "electronics",
+      "todos": [
+        {
+          "title": "laptop",
+          "description": "buy a new laptop"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "title": "watches",
+      "todos": [
+        {
+          "title": "sonata",
+          "description": "buy a new watch"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "",
+      "todos": [],
+      "id": 3
+    }
+  ]
+}

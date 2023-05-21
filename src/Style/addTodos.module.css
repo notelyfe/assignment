@@ -1,0 +1,71 @@
+.addTodo {
+    min-width: 280px;
+    /* height: 350px; */
+    background: #191B20;
+    border-radius: 12px;
+    /* border: 2px solid red; */
+    padding: 0.8rem;
+}
+
+.todoheader {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.titleContainer input,
+textarea {
+    background-color: #191B20;
+    color: white;
+    width: 94%;
+    font-size: 18px;
+    padding: 0 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.titleContainer input {
+    height: 40px;
+}
+
+.titleContainer input::placeholder {
+    font-weight: 700;
+}
+
+.bag {
+    width: 15px;
+    height: 15px;
+    padding: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #BBB5E2 0%, #9C92DF 100%);
+}
+
+.AddBtn {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #474c57;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.AddBtn:active {
+    transform: scale(0.9);
+}

@@ -1,0 +1,58 @@
+.wrapper{
+    min-width: 280px;
+    /* height: 120px; */
+    background: #191B20;
+    border-radius: 12px;
+    /* border: 2px solid red; */
+    padding: 0.8rem;
+    text-transform: capitalize;
+}
+
+.todoheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+    min-height: 45px;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.descriptionWrapper{
+    min-height: 50px;
+    padding: 0.3rem;
+    font-size: 18px;
+}
+
+.bag {
+    width: 15px;
+    height: 15px;
+    padding: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #BBB5E2 0%, #9C92DF 100%);
+}
+
+.AddBtn {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #474c57;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.AddBtn:active {
+    transform: scale(0.9);
+}
