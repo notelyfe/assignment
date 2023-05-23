@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import moneybag from '../Assets/money-bag.png'
 import style from '../Style/addTodos.module.css'
-import api from '../Services/api'
 import { toast } from 'react-hot-toast'
 
-const AddTodos = ({ id, title }) => {
+const AddTodos = ({ id, setTodoLists }) => {
 
     const [todo, setTodo] = useState({ title: '', description: '' })
 
@@ -15,16 +14,38 @@ const AddTodos = ({ id, title }) => {
     const addNewTodo = async (e) => {
         e.preventDefault()
 
-        const data = [{
+        let todoId = Math.floor(Math.random() * 1000)
+
+        const data = {
+            id: todoId,
             title: todo.title,
             description: todo.description
-        }]
+        }
 
         try {
 
-            const res = await api.put(`/todo-list/${id}`, { title: title, todos: data })
+            const res = JSON.parse(localStorage.getItem("todos"))
 
-            console.log("res", res)
+            res.map((item, index) => {
+                if (item.id === id) {
+
+                    var newData = {
+                        id: item.id,
+                        title: item.title,
+                        todos: item.todos.concat(data)
+                    }
+
+                    res.splice(index, 1, newData)
+
+                    localStorage.setItem('todos', JSON.stringify(res))
+
+                    toast.success("Todo added successfully")
+                }
+            })
+
+            const newResponse = JSON.parse(localStorage.getItem("todos"))
+            setTodoLists(newResponse)
+            setTodo({ title: '', description: '' })
 
         } catch (error) {
             toast.error(error)

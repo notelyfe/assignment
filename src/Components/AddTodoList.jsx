@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import style from '../Style/todolist.module.css'
-import api from '../Services/api'
 import { toast } from 'react-hot-toast'
-
 import AddTodos from './AddTodos'
 import AllTodos from './AllTodos'
 
@@ -15,9 +13,9 @@ const AddTodoList = () => {
 
         try {
 
-            const { data } = await api.get('/todo-list')
+            const todoList = JSON.parse(localStorage.getItem("todos"))
 
-            setTodoLists(data)
+            setTodoLists(todoList)
 
         } catch (error) {
             console.log(error)
@@ -32,24 +30,41 @@ const AddTodoList = () => {
     const addNewTodoList = async (e) => {
         e.preventDefault()
 
-        let data = {
+        var id = Math.floor(Math.random() * 1000)
+
+        let data = [{
+            id: id,
             title: newTodoList,
-            todos: []
-        }
+            todos: [],
+        }]
 
         try {
 
-            const res = await api.post('/todo-list', data)
+            const res = JSON.parse(localStorage.getItem("todos"))
 
-            setTodoLists([...todoLists, res.data])
+            if (res) {
 
-            // if (res.status === 200) {
+                let newData = res.concat(data)
+
+                localStorage.setItem("todos", JSON.stringify(newData))
+
+                const newList = JSON.parse(localStorage.getItem("todos"))
+
+                setTodoLists(newList)
+
+            } else {
+                localStorage.setItem("todos", JSON.stringify(data))
+
+                const newList = JSON.parse(localStorage.getItem("todos"))
+
+                setTodoLists(newList)
+            }
+
             setNewTodoList('')
-            toast.success('todo added')
-            // }
+            toast.success("New TodoList added successfully");
 
         } catch (error) {
-            console.log(error)
+            toast.error("Error submitting new todo");
         }
     }
 
@@ -61,7 +76,7 @@ const AddTodoList = () => {
                         <div className={style.todolist}>
                             <p>List: {item.title}</p>
                         </div>
-                        <AddTodos id={item.id} title={item.title} />
+                        <AddTodos id={item.id} setTodoLists={setTodoLists} />
                         {item?.todos?.map((todo) => {
                             return (
                                 <AllTodos key={todo.title} todo={todo} listId={item.id} />
