@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import style from '../Style/todolist.module.css'
 import { toast } from 'react-hot-toast'
 import AddTodos from './AddTodos'
 import AllTodos from './AllTodos'
+import Context from '../Context/Context'
 
 const AddTodoList = () => {
 
-    const [todoLists, setTodoLists] = useState(null)
+    // const [todoLists, setTodoLists] = useState(null)
+    const { todoLists, setTodoLists } = useContext(Context)
     const [newTodoList, setNewTodoList] = useState('')
 
     const getTodoLists = async () => {
