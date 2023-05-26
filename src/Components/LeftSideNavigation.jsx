@@ -37,19 +37,19 @@ const LeftSideNavigation = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link className={`${style.navLinks} ${location.pathname === "about" && style.activeLink}`} to="/about">
+                        <Link className={`${style.navLinks} ${location.pathname === "/about" && style.activeLink}`} to="/about">
                             <img src={histogram} alt="" />
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link className={`${style.navLinks} ${location.pathname === "contact" && style.activeLink}`} to="/contact">
+                        <Link className={`${style.navLinks} ${location.pathname === "/contact" && style.activeLink}`} to="/contact">
                             <img src={barIcon} alt="" />
                             Contact
                         </Link>
                     </li>
                     <li>
-                        <Link className={`${style.navLinks} ${location.pathname === "add-data" && style.activeLink}`} to="/add-data">
+                        <Link className={`${style.navLinks} ${location.pathname === "/add-data" && style.activeLink}`} to="/add-data">
                             <img src={shareIcon} alt="" />
                             Add Data
                         </Link>
